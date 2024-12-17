@@ -20,6 +20,7 @@ export const errorHandler = (
   response: Response<ErrorResponse>,
   nextFunction: NextFunction
 ) => {
+  console.log("coucou", error);
   const statusCode = response.statusCode !== 200 ? response.statusCode : 500;
   response
     .status(statusCode)

@@ -23,7 +23,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.urlencoded({ extended: true })); // 
+app.use(express.urlencoded({ extended: true })); //
 
 // Routes
 app.use("/avions", AvionController);
@@ -37,5 +37,4 @@ app.use("/", (req, res) => {
 
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
-
 export default app;
